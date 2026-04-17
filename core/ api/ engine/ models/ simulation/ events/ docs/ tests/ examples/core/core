@@ -1,0 +1,14 @@
+class CascadeEngine:
+    def __init__(self, graph):
+        self.graph = graph
+
+    def execute(self, event):
+        node = self.graph.get(event["node"])
+        return self._propagate(node, event)
+
+    def _propagate(self, node, event):
+        return {
+            "node": node,
+            "status": "simulated",
+            "event": event
+        }
