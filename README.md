@@ -46,13 +46,10 @@ This project is under active development for sandbox and research evaluation.
 
 It is not a production financial system and does not process real transactions.
 
----
+## POC Execution (Simulation Demo)
 
-## ⚙️ 4. Commit changes (IMPORTANT)
+This repository contains a deterministic failure propagation simulator.
 
-Scroll down → “Commit changes”
-
-Use message:
-
-```text id="commit1"
-Add POC execution instructions for GitHub demo
+### Run POC:
+```bash
+python poc_demo.py
