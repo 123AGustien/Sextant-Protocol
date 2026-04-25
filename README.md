@@ -46,7 +46,7 @@ This project is under active development for sandbox and research evaluation.
 
 It is not a production financial system and does not process real transactions.
 
-## POC Execution (Simulation Demo)
+## 🚀 POC Execution (Simulation Demo)
 
 This repository contains a deterministic failure propagation simulator.
 
