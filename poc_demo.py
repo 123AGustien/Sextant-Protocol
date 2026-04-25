@@ -1,24 +1,3 @@
-# poc_demo.py
-
-class Node:
-    def __init__(self, name):
-        self.name = name
-        self.state = "OK"
-        self.dependents = []
-
-    def add(self, node):
-        self.dependents.append(node)
-
-def propagate_failure(node, log):
-    if node.state == "FAIL":
-        return
-
-    node.state = "FAIL"
-    log.append(node.name + " failed")
-
-    for d in node.dependents:
-        log.append(node.name + " impacts " + d.name)
-        propagate_failure(d, log)
 
 import json
 
@@ -30,6 +9,7 @@ class Node:
 
     def add(self, node):
         self.dependents.append(node)
+
 
 def propagate_failure(node, log):
     if node.state == "FAIL":
@@ -74,3 +54,4 @@ def run_simulation():
 
 if __name__ == "__main__":
     run_simulation()
+    
