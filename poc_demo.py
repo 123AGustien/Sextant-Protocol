@@ -49,7 +49,7 @@ def run_simulation():
     for entry in log:
         print(entry)
 
-    print("\nREPLAY TEST:", True)
+    print("\nREPLAY TEST:", log == log2)
 
 
 
