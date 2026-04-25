@@ -24,6 +24,7 @@ def propagate_failure(node, log):
 
 
 def run_simulation():
+    # MAIN RUN
     A = Node("A")
     B = Node("B")
     C = Node("C")
@@ -38,6 +39,7 @@ def run_simulation():
     A.state = "FAIL"
     propagate_failure(A, log)
 
+    # SAVE OUTPUT (for Cloud / POC)
     output = {
         "log": log,
         "replay_test": True
@@ -46,26 +48,27 @@ def run_simulation():
     with open("result.json", "w") as f:
         json.dump(output, f, indent=2)
 
+    print("MAIN RUN:")
     for entry in log:
-        print(entry)# replay test
-log2 = []
+        print(entry)
 
-A2 = Node("A")
-B2 = Node("B")
-C2 = Node("C")
-D2 = Node("D")
+    # REPLAY TEST (THIS GOES HERE 👇)
+    log2 = []
 
-A2.add(B2)
-B2.add(C2)
-C2.add(D2)
+    A2 = Node("A")
+    B2 = Node("B")
+    C2 = Node("C")
+    D2 = Node("D")
 
-A2.state = "FAIL"
-propagate_failure(A2, log2)
+    A2.add(B2)
+    B2.add(C2)
+    C2.add(D2)
 
-print("\nREPLAY TEST:", log == log2)
+    A2.state = "FAIL"
+    propagate_failure(A2, log2)
 
     print("\nREPLAY TEST:", log == log2)
 
 
-
-    
+if __name__ == "__main__":
+    run_simulation()
