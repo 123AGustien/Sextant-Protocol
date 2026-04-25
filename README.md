@@ -45,3 +45,14 @@ API → Event Processing → Cascade Engine → Graph Model → Output Layer
 This project is under active development for sandbox and research evaluation.
 
 It is not a production financial system and does not process real transactions.
+
+---
+
+## ⚙️ 4. Commit changes (IMPORTANT)
+
+Scroll down → “Commit changes”
+
+Use message:
+
+```text id="commit1"
+Add POC execution instructions for GitHub demo
