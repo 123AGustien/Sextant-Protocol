@@ -47,7 +47,22 @@ def run_simulation():
         json.dump(output, f, indent=2)
 
     for entry in log:
-        print(entry)
+        print(entry)# replay test
+log2 = []
+
+A2 = Node("A")
+B2 = Node("B")
+C2 = Node("C")
+D2 = Node("D")
+
+A2.add(B2)
+B2.add(C2)
+C2.add(D2)
+
+A2.state = "FAIL"
+propagate_failure(A2, log2)
+
+print("\nREPLAY TEST:", log == log2)
 
     print("\nREPLAY TEST:", log == log2)
 
