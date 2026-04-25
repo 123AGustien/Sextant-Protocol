@@ -52,6 +52,5 @@ def run_simulation():
     print("\nREPLAY TEST:", True)
 
 
-if __name__ == "__main__":
-    run_simulation()
+
     
