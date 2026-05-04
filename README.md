@@ -1,4 +1,4 @@
-# Sextant Protocol – Cascade Lens V2
+# Sextant Protocol – Cascade Lens V2 (v1.0)
 
 ## Deterministic Sandbox Simulation Engine for Dependency Graph Modeling & Failure Propagation Analysis
 
@@ -37,7 +37,9 @@ API → Event Processing → Cascade Engine → Graph Model → Output Layer
 ---
 
 ## Status
-This project is under active development for sandbox and research evaluation.  
+v1.0 – Stable foundational release (Cascade Lens Core Doctrine complete)
+
+This project is designed for sandbox and research evaluation purposes only.  
 It is not a production financial system and does not process real transactions.
 
 ---
